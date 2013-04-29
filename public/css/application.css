@@ -13,3 +13,7 @@
 .countdown {
   display: none;
 }
+
+#track {
+  display: none;
+}

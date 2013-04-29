@@ -1,29 +1,45 @@
-<div class="countdown">
-  <h1>Countdown: <span id="count">3</span></h1>
-</div>
-<table class="racer_table">
-  <tr id="player1_strip">
-    <td id='1' class="active"></td>
-    <td id='2'></td>
-    <td id='3'></td>
-    <td id='4'></td>
-    <td id='5'></td>
-    <td id='6'></td>
-    <td id='7'></td>
-    <td id='8'></td>
-    <td id='9'></td>
-  </tr>
-  <tr id="player2_strip">
-   <td id='1' class="active"></td>
-   <td id='2'></td>
-   <td id='3'></td>
-   <td id='4'></td>
-   <td id='5'></td>
-   <td id='6'></td>
-   <td id='7'></td>
-   <td id='8'></td>
-   <td id='9'></td>
-  </tr>
-</table>
+<div class="player-form">
+  <form action="/" method="POST"> 
+    <label for="player1">Player 1:</label>
+    <input type="text" name="player1"><br />
+    <label for="player2">Player 2:</label>
+    <input type="text" name="player2"><br>
+    <input type="submit" value="RACE">
+  </form>
+</div> 
 
-<button id="start">START RACE</button>
+<% if @errors %>
+  <p class="error"><%= @errors %></p>
+<% end %>
+
+
+<div id="track">
+  <div class="countdown">
+    <h1>Countdown: <span id="count">3</span></h1>
+  </div>
+  <table class="racer_table">
+    <tr id="player1_strip">
+      <td id='1' class="active"></td>
+      <td id='2'></td>
+      <td id='3'></td>
+      <td id='4'></td>
+      <td id='5'></td>
+      <td id='6'></td>
+      <td id='7'></td>
+      <td id='8'></td>
+      <td id='9'></td>
+    </tr>
+    <tr id="player2_strip">
+     <td id='1' class="active"></td>
+     <td id='2'></td>
+     <td id='3'></td>
+     <td id='4'></td>
+     <td id='5'></td>
+     <td id='6'></td>
+     <td id='7'></td>
+     <td id='8'></td>
+     <td id='9'></td>
+    </tr>
+  </table>
+  <button id="start">START RACE</button>
+</div>
