@@ -1,0 +1,15 @@
+.racer_table td {
+  background-color: white;
+  border-right: 1px solid #333;
+  height: 20px;
+  width: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.racer_table td.active {
+  background-color: black;
+}
+
+.countdown {
+  display: none;
+}
