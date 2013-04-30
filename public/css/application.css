@@ -1,9 +1,79 @@
+body {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	color: #222;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#header {
+	margin: 25px 0 50px 0;
+}
+
+#main {
+  background-color: #f7f7f7;
+  padding: 25px 0;
+}
+
+.jumbotron {
+	padding-left: 60px;
+}
+
+#js-logo {
+	height: 125px;
+	width: 125px;
+	background-color: #edd717;
+	text-align: right;
+	float: left;
+}
+
+#js-logo h1 {
+  font-size: 100px;
+  padding: 25px 10px 0 0;
+  margin: 0;
+  line-height: 1;
+}
+
+#racer {
+  font-size: 100px;
+  font-weight: 200;
+  padding: 25px 0 0 5px;
+  margin: 0;
+  line-height: 1;
+  float: left;
+}
+
+#color-box1,
+#color-box2 {
+	height: 100px;
+	width: 100px;
+	background-color: #ddd;
+	overflow: hidden;
+}
+
+#init1,
+#init2 {
+	display: block;
+	float: right;
+  font-size: 75px;
+  padding: 25px 10px 0 0;
+  text-align: right;
+}
+
+#vs {
+	margin-top: 20px;
+	text-align: center;
+}
+
 .racer_table td {
-  background-color: white;
-  border-right: 1px solid #333;
-  height: 20px;
-  width: 20px;
-  border-bottom: 1px solid #333;
+  border-right: 1px solid #ccc;
+  height: 25px;
+  width: 25px;
+  border-bottom: 1px solid #ccc;
 }
 
 .racer_table td.active {
@@ -12,6 +82,11 @@
 
 .countdown {
   display: none;
+  text-align: center;
+}
+
+#count {
+  font-size: 75px;
 }
 
 #track {
@@ -20,4 +95,24 @@
 
 #results {
   display: none;
+}
+
+.finish-line {
+  float: right;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+#start-button {
+  text-align: center;
+}
+
+#results {
+  text-align: center;
 }

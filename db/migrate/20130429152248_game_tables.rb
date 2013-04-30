@@ -1,11 +1,12 @@
 class GameTables < ActiveRecord::Migration
   def change
     create_table :players do |t|
-      t.string :name, :null => false
+      t.string :initials, :null => false
+      t.string :color, :default => "edd717"
       t.timestamps
     end
 
-    add_index(:players, :name, :unique => true)
+    add_index(:players, :initials, :unique => true)
 
     create_table :games do |t|
       t.string :winner

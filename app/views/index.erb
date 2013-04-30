@@ -1,50 +1,140 @@
-<div class="player-form">
-  <form action="/" method="POST"> 
-    <label for="player1">Player 1:</label>
-    <input type="text" name="player1"><br />
-    <label for="player2">Player 2:</label>
-    <input type="text" name="player2"><br>
-    <input type="submit" id="start-button" value="RACE">
-  </form>
-</div> 
-
-
-
-<div id="track">
-  <div class="countdown">
-    <h1>Countdown: <span id="count">3</span></h1>
+<section id="main">
+  <div id="title-screen">
+    <form action="/" method="POST" class="row">
+      <div id="player1" class="large-5 columns">
+        <div class="row">
+          <div class="large-8 columns">
+            <input type="text" name="initials1" id="initials1" maxlength="2" placeholder="INITIALS"><br />
+            <input type="text" name="color1" id="color1" maxlength="6" placeholder="PLAYER COLOR (hex value)">
+          </div>
+          <div class="large-4 columns">
+            <div id="color-box1"><span id="init1">JS</span></div>
+          </div>
+        </div>
+      </div>
+      <div id="vs" class="large-2 columns">
+        <button type="submit">LETS DO IT</button>
+      </div>
+      <div id="player2" class="large-5 columns">
+        <div class="row">
+          <div class="large-4 columns">
+            <div id="color-box2"><span id="init2">JS</span></div>
+          </div>
+          <div class="large-8 columns">
+            <input type="text" name="initials2" id="initials2" maxlength="2" placeholder="INITIALS"><br />
+            <input type="text" name="color2" id="color2" maxlength="6" placeholder="PLAYER COLOR (hex value)">
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
-  <table class="racer_table">
-    <tr id="player1_strip">
-      <td id="player1"></td>
-      <td id='1' class="active"></td>
-      <td id='2'></td>
-      <td id='3'></td>
-      <td id='4'></td>
-      <td id='5'></td>
-      <td id='6'></td>
-      <td id='7'></td>
-      <td id='8'></td>
-      <td id='9'></td>
-    </tr>
-    <tr id="player2_strip">
-     <td id='player2'></td>
-     <td id='1' class="active"></td>
-     <td id='2'></td>
-     <td id='3'></td>
-     <td id='4'></td>
-     <td id='5'></td>
-     <td id='6'></td>
-     <td id='7'></td>
-     <td id='8'></td>
-     <td id='9'></td>
-    </tr>
-  </table>
-  <button id="start">START RACE</button>
-</div>
-
-<div id="results">
-  <h1>Results:</h1>
-  <p id="winner"></p>
-  <p id="loser"></p>
-</div>
+  <div class="row">
+    <div class="large-12 columns">
+      <div id="track">
+        <!-- <table class="finish-line">
+          <tr>
+            <td class="black"></td>
+            <td class="white"></td>
+          </tr>
+        </table> -->
+        <table class="racer_table">
+          <tr id="player1_strip">
+            <td id="player1-start"></td>
+            <td id='1' class="active1"></td>
+            <td id='2'></td>
+            <td id='3'></td>
+            <td id='4'></td>
+            <td id='5'></td>
+            <td id='6'></td>
+            <td id='7'></td>
+            <td id='8'></td>
+            <td id='9'></td>
+            <td id='10'></td>
+            <td id='11'></td>
+            <td id='12'></td>
+            <td id='13'></td>
+            <td id='14'></td>
+            <td id='15'></td>
+            <td id='16'></td>
+            <td id='17'></td>
+            <td id='18'></td>
+            <td id='19'></td>
+            <td id='20'></td>
+            <td id='21'></td>
+            <td id='22'></td>
+            <td id='23'></td>
+            <td id='24'></td>
+            <td id='25'></td>
+            <td id='26'></td>
+            <td id='27'></td>
+            <td id='28'></td>
+            <td id='29'></td>
+            <td id='30'></td>
+            <td id='31'></td>
+            <td id='32'></td>
+            <td id='33'></td>
+            <td id='34'></td>
+            <td id='35'></td>
+            <td id='36' class="white"></td>
+            <td id='37' class="black"></td>
+          </tr>
+          <tr id="player2_strip">
+            <td id='player2-start'></td>
+            <td id='1' class="active2"></td>
+            <td id='2'></td>
+            <td id='3'></td>
+            <td id='4'></td>
+            <td id='5'></td>
+            <td id='6'></td>
+            <td id='7'></td>
+            <td id='8'></td>
+            <td id='9'></td>
+            <td id='10'></td>
+            <td id='11'></td>
+            <td id='12'></td>
+            <td id='13'></td>
+            <td id='14'></td>
+            <td id='15'></td>
+            <td id='16'></td>
+            <td id='17'></td>
+            <td id='18'></td>
+            <td id='19'></td>
+            <td id='20'></td>
+            <td id='21'></td>
+            <td id='22'></td>
+            <td id='23'></td>
+            <td id='24'></td>
+            <td id='25'></td>
+            <td id='26'></td>
+            <td id='27'></td>
+            <td id='28'></td>
+            <td id='29'></td>
+            <td id='30'></td>
+            <td id='31'></td>
+            <td id='32'></td>
+            <td id='33'></td>
+            <td id='34'></td>
+            <td id='35'></td>
+            <td id='36' class="black"></td>
+            <td id='37' class="white"></td>
+          </tr>
+        </table>
+        <div id="start-button">
+          <button id="start">START RACE</button>
+        </div>
+        <div class="countdown">
+          <h1><span id="count">3</span></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <div id="results" class="panel">
+        <h1>JS Racer Results:</h1>
+        <p id="winner"></p>
+        <p id="loser"></p>
+      </div>
+    </div>
+  </div>
+</section>
