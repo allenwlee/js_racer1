@@ -5,10 +5,7 @@ $(document).ready(function() {
   var qPosition = 1;
   var track = $("#player1_strip").find("td").size();
   var counter = 3;
-
-  function Person(name) {
-    this.name = name
-  }
+  var players = [];
 
   $('#start').on('click', function() {
     $('.countdown').show()
@@ -29,10 +26,6 @@ $(document).ready(function() {
       $('body').append(jqXHR.responseText);
     });
   });
-
-  function getPlayers(){
-
-  }
 
   function createPlayers(server_data){
     var player1 = {
@@ -93,7 +86,7 @@ $(document).ready(function() {
         update_player_position("player1_strip", pPosition);
         if (pPosition == track){
           var p1 = $('#player1').html();
-          winner(p1,  startTime);
+          finishLine(p1,  startTime);
         }
       }
     });
@@ -105,15 +98,29 @@ $(document).ready(function() {
        update_player_position("player2_strip", qPosition);
         if (qPosition == track){
           var p2 = $('#player2').html();
-          winner(p2, startTime );
+          finishLine(p2, startTime);
         }
       }
     });
 
-    function winner(player, startTime){
+  
+    function finishLine(player, startTime) {
       var d = new Date();
       var endTime = d.getTime() - startTime;
-      $('#start').hide(); 
+      players.push({player: player, score: endTime})
+      $('#start').hide();
+
+      if(players.length === 2) {
+        results();
+      }
+    }
+
+    function results() {
+      var winner = players[0]
+      var loser = players[1]
+      $("#winner").html(winner.player + " " + (winner.score / 1000));
+      $("#loser").html(loser.player+ " " + (loser.score / 1000));
+      $("#results").show();
 
     }
   };

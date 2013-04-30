@@ -23,9 +23,11 @@ post '/' do
   end
 end
 
-# get "/errors" do
-#   @errors = "Sorry"
+get '/game/:id' do
+  @game = Game.find(params[:id])
+  #  winner, time 
+  #  in game object, there are player ids 
 
-#   erb :index
-# end
+  erb :results
+end
 
