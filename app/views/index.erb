@@ -4,13 +4,10 @@
     <input type="text" name="player1"><br />
     <label for="player2">Player 2:</label>
     <input type="text" name="player2"><br>
-    <input type="submit" value="RACE">
+    <input type="submit" id="start-button" value="RACE">
   </form>
 </div> 
 
-<% if @errors %>
-  <p class="error"><%= @errors %></p>
-<% end %>
 
 
 <div id="track">
@@ -19,6 +16,7 @@
   </div>
   <table class="racer_table">
     <tr id="player1_strip">
+      <td id="player1"></td>
       <td id='1' class="active"></td>
       <td id='2'></td>
       <td id='3'></td>
@@ -30,6 +28,7 @@
       <td id='9'></td>
     </tr>
     <tr id="player2_strip">
+     <td id='player2'></td>
      <td id='1' class="active"></td>
      <td id='2'></td>
      <td id='3'></td>
